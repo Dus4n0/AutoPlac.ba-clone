@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywrods" content="AutoPlac.ba" />
+    <meta name="description" content="Prodaja i kupovina automobila" />
+    <title>AutoPlac - Kupi ili prodaj dok kažeš plac</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="shortcut icon" type="x-icon" href="./assets/logo.svg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-poppins">
+    <!--Navbar-->
+    <nav class="fixed top-0 z-10 w-full py-4 mt-0 bg-white shadow-sm">
+      <div class="container flex flex-row justify-between mx-auto">
+        <div class="mt-3">
+          <img src="./assets/logo.svg" alt="" />
+        </div>
+        <div class="">
+          <div class="flex flex-row">
+            <button
+              class="flex px-4 py-3 font-bold text-gray-600 xs:hidden md:flex"
+            >
+              Prijava
+            </button>
+            <button
+              class="flex px-6 py-3 text-gray-200 bg-blue-900 rounded-md xs:hidden md:flex"
+            >
+              Registruj se
+            </button>
+          </div>
+          <button
+            id="menu-btn"
+            class="fixed right-[15%] flex hamburger md:hidden focus:outline-none"
+          >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+        <!--Mobile menu-->
+        <div class="md:hidden">
+          <div
+            id="menu"
+            class="absolute left-0 right-0 flex flex-col items-center self-end hidden py-8 mt-16 space-y-6 bg-white xs:w-auto xs:self-center drop-shadow-md"
+          >
+            <div class="w-[90%] mx-auto space-y-3">
+              <div class="flex flex-col space-y-1">
+                <label for="">KORISNICKO IME</label>
+                <input
+                  type="text"
+                  id=""
+                  class="w-[98%] mx-auto rounded-sm outline-none h-9 outline-slate-300"
+                />
+              </div>
+              <div class="flex flex-col space-y-1">
+                <label for="">LOZINKA</label>
+                <input
+                  type="password"
+                  class="w-[98%] mx-auto rounded-sm outline-none outline-slate-300 h-9"
+                />
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="w-full py-2 text-center text-gray-200 bg-blue-900 rounded-sm"
+                >
+                  Prijavi se
+                </button>
+              </div>
+              <div class="space-y-1">
+                <p class="text-slate-300">
+                  Nemate korisnički račun? Registrujte se!
+                </p>
+                <button
+                  type="submit"
+                  class="w-full py-2 text-center border rounded-sm"
+                >
+                  Registracija
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--Content-->
+    <main class="mt-20">
+      <section class="relative bg-[url('../assets/header-backgorund.svg/')]">
+        <div class="container mx-auto">
+          <div class="flex xs:flex-col md:flex-row">
+            <div class="container flex flex-col mx-auto my-7">
+              <h1 class="py-5 text-6xl font-bold xs:w-full md:w-5/6">
+                Kupi ili prodaj, dok kazes Plac!
+              </h1>
+              <div class="">
+                <p class="font-semibold mt-7">PRETRAZI</p>
+                <div class="flex flex-row mt-4 border-s-orange-200">
+                  <input
+                    type="text"
+                    placeholder="Pretraga.."
+                    class="w-9/12 p-5 shadow-md outline-none xs:w-full lg:w-[45%] md:w-[45%] xxl:w-[32%]"
+                  />
+                  <button type="submit" class="px-5 bg-blue-600 rounded-r-md">
+                    <img src="./assets/loupe.png" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flex mt-16 md:flex-row md:mt-16 md:space-y-0 xs:flex-col xs:mt-6 xs:space-y-3"
+              >
+                <button
+                  class="flex items-center justify-center w-[42%] xxl:w-[18%] xl:w-[25%] lg:w-[27%] md:w-[28%] xs:w-full mr-2 transition duration-500 bg-blue-500 rounded py-7 h-9 hover:bg-blue-700 hover:duration-500"
+                >
+                  <img src="./assets/handshake.png" alt="" class="" />
+                  <p class="font-semibold text-white mx-7">Prodajem</p>
+                  <img src="./assets/right-arrow.png" alt="" class="w-3" />
+                </button>
+                <button
+                  class="flex items-center justify-center w-[42%] mr-3 xxl:w-[18%] xl:w-[25.5%] lg:w-[27%] md:w-[28%] xs:w-full transition duration-500 bg-blue-500 rounded py-7 h-9 hover:bg-blue-700 hover:duration-500"
+                >
+                  <img src="./assets/shopping-cart .png" alt="" class="" />
+                  <p class="font-semibold text-white mx-7">Kupujem</p>
+                  <img src="./assets/right-arrow.png" alt="" class="w-3" />
+                </button>
+              </div>
+              <div
+                class="mx-auto ml-0 mt-14 w-[85%] xl:w-[490px] md:w-[55%] xs:w-full"
+              >
+                <img src="./assets/instructions-image.svg" alt="" />
+              </div>
+            </div>
+            <div class="w-1/2"></div>
+            <div
+              class="hero-image xs:relative xs:justify-center md:absolute md:right-[5%]"
+            >
+              <img src="./assets/hero.webp" alt="" class="" />
+            </div>
+            <div class="absolute right-0 -z-10 h-[100%] xs:hidden md:block">
+              <img
+                src="./assets/header-background.svg"
+                alt=""
+                class="h-[100%]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Manufacturers-->
+      <div class="container mx-auto mt-10">
+        <div>
+          <div
+            class="flex justify-between px-3 py-0 border-l-4 border-blue-600"
+          >
+            <h3 class="text-3xl font-semibold xs:text-xl md:text-3xl">
+              Najpopularniji proizvodjaci
+            </h3>
+            <div
+              class="transition duration-500 rounded hover:bg-slate-100 hover:duration-700"
+            >
+              <a
+                href=""
+                class="right-0 flex flex-row items-center p-1 text-lg font-semibold text-blue-950 xs:text-xs md:text-lg"
+                ><p>Pogledaj sve proizvodjace</p>
+                <img src="./assets/next 2.png" alt="" class="w-5 mt-1 ml-2"
+              /></a>
+            </div>
+          </div>
+          <div class="flex flex-row justify-between mt-12 xs:flex-wrap">
+            <a
+              href=""
+              class="flex flex-row items-center transition duration-500 border rounded hover:border-blue-600 hover:duration-500"
+            >
+              <img
+                src="./assets/Volskwagen.webp"
+                alt=""
+                class="object-cover p-1 w-14 h-14"
+              />
+              <div class="flex flex-col px-2 py-2">
+                <h4 class="font-semibold">Volkswagen</h4>
+                <p class="text-slate-400">171 vozilo</p>
+              </div>
+            </a>
+            <a
+              href=""
+              class="flex flex-row items-center transition duration-500 border rounded hover:border-blue-600 hover:duration-500"
+            >
+              <img
+                src="./assets/audi.webp"
+                alt=""
+                class="object-cover p-1 w-14 h-14"
+              />
+              <div class="flex flex-col px-2 py-2">
+                <h4 class="font-semibold">Audi</h4>
+                <p class="text-slate-400">92 vozilo</p>
+              </div>
+            </a>
+            <a
+              href=""
+              class="flex flex-row items-center transition duration-500 border rounded hover:border-blue-600 hover:duration-500"
+            >
+              <img
+                src="./assets/skoda.webp"
+                alt=""
+                class="object-cover p-1 w-14 h-14"
+              />
+              <div class="flex flex-col px-2 py-2">
+                <h4 class="font-semibold">Skoda</h4>
+                <p class="text-slate-400">90 vozilo</p>
+              </div>
+            </a>
+            <a
+              href=""
+              class="flex flex-row items-center transition duration-500 border rounded hover:border-blue-600 hover:duration-500"
+            >
+              <img
+                src="./assets/peugeot.webp"
+                alt=""
+                class="object-cover p-1 w-14 h-14"
+              />
+              <div class="flex flex-col px-2 py-2">
+                <h4 class="font-semibold">Peugeot</h4>
+                <p class="text-slate-400">71 vozilo</p>
+              </div>
+            </a>
+            <a
+              href=""
+              class="flex flex-row items-center transition duration-500 border rounded hover:border-blue-600 hover:duration-500"
+            >
+              <img
+                src="./assets/mercedes.webp"
+                alt=""
+                class="object-cover w-12 h-12 p-1"
+              />
+              <div class="flex flex-col px-2 py-2">
+                <h4 class="font-semibold">Mercedes</h4>
+                <p class="text-slate-400">62 vozilo</p>
+              </div>
+            </a>
+            <a
+              href=""
+              class="flex flex-row items-center transition duration-500 border rounded hover:border-blue-600 hover:duration-500"
+            >
+              <img
+                src="./assets/bmw.webp"
+                alt=""
+                class="object-cover w-12 h-12 p-1"
+              />
+              <div class="flex flex-col px-1 py-2">
+                <h4 class="font-semibold">BMW</h4>
+                <p class="text-slate-400">58 vozilo</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--Car lots-->
+      <div class="container mx-auto mt-10">
+        <div class="">
+          <div
+            class="flex justify-between px-3 py-0 mx-auto border-l-4 border-blue-600"
+          >
+            <h3 class="font-semibold xs:text-xl md:text-3xl">AutoPlacevi</h3>
+            <div
+              class="transition duration-500 rounded hover:bg-slate-100 hover:duration-700"
+            >
+              <a
+                href=""
+                class="flex flex-row items-center font-semibold text-blue-950 xs:text-xs xs:w-36 xs:p-0 md:text-lg md:w-auto md:p-1"
+                ><p>Pogledaj sve AutoPlac-eve</p>
+                <img src="./assets/next 2.png" alt="" class="w-5 mt-1 ml-2"
+              /></a>
+            </div>
+          </div>
+          <div
+            class="flex flex-row mt-12 xs:flex-wrap xs:justify-center xs:space-y-3 md:justify-between md:space-y-0 md:flex-nowrap"
+          >
+            <a
+              href=""
+              class="flex flex-row items-center h-16 transition duration-500 border rounded hover:border-blue-600 hover:duration-500 xs:w-[60%] sm:w-[45%] md:w-auto"
+            >
+              <img
+                src="./assets/kia-sarajevo.webp"
+                alt=""
+                class="object-cover p-1 rounded-full w-14 h-14"
+              />
+              <div class="flex flex-col px-2 py-2">
+                <h4 class="font-semibold">KiaSarajevo</h4>
+                <p class="text-slate-400">116 vozilo</p>
+              </div>
+            </a>
+            <a
+              href=""
+              class="flex flex-row items-center h-16 transition duration-500 border rounded hover:border-blue-600 hover:duration-500 xs:w-[60%] sm:w-[45%] md:w-auto"
+            >
+              <img
+                src="./assets/auto-direct.webp"
+                alt=""
+                class="object-cover p-1 rounded-full w-14 h-14"
+              />
+              <div class="flex flex-col px-2 py-2">
+                <h4 class="font-semibold">AutoDirect</h4>
+                <p class="text-slate-400">80 vozilo</p>
+              </div>
+            </a>
+            <a
+              href=""
+              class="flex flex-row items-center h-16 transition duration-500 border rounded hover:border-blue-600 hover:duration-500 xs:w-[60%] sm:w-[45%] md:w-auto"
+            >
+              <img
+                src="./assets/arena-motos.webp"
+                alt=""
+                class="object-cover p-1 rounded-full w-14 h-14"
+              />
+              <div class="flex flex-col px-2 py-2">
+                <h4 class="font-semibold">GalaPremium</h4>
+                <p class="text-slate-400">61 vozilo</p>
+              </div>
+            </a>
+            <a
+              href=""
+              class="flex flex-row items-center h-16 transition duration-500 border rounded hover:border-blue-600 hover:duration-500 xs:w-[60%] sm:w-[45%] md:w-auto"
+            >
+              <img
+                src="./assets/sksauto.webp"
+                alt=""
+                class="object-cover p-1 rounded-full w-14 h-14"
+              />
+              <div class="flex flex-col px-2 py-2">
+                <h4 class="font-semibold">SKSAUTO</h4>
+                <p class="text-slate-400">53 vozilo</p>
+              </div>
+            </a>
+            <a
+              href=""
+              class="flex flex-row h-16 transition duration-500 border rounded hover:border-blue-600 hover:duration-500"
+            >
+              <img
+                src="./assets/car-next-sarajevo.webp"
+                alt=""
+                class="object-cover p-1 rounded-full w-14 h-14"
+              />
+              <div class="flex flex-col px-1 py-2">
+                <h4 class="font-semibold">CarNextSarajevo</h4>
+                <p class="text-slate-400">30 vozilo</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--Products-->
+      <div class="mt-10">
+        <div
+          class="container flex justify-between px-3 py-0 mx-auto border-l-4 border-blue-600"
+        >
+          <h3 class="font-semibold xs:text-lg md:text-3xl">
+            Moglo bi Vas zanimati
+          </h3>
+          <div
+            class="transition duration-500 rounded hover:bg-slate-100 hover:duration-700"
+          >
+            <a
+              href=""
+              class="flex flex-row items-center p-1 font-semibold text-blue-950 xs:text-xs md:text-lg"
+              ><p>Pogledaj sva vozila</p>
+              <img src="./assets/next 2.png" alt="" class="w-5 mt-1 ml-2"
+            /></a>
+          </div>
+        </div>
+        <div
+          class="container flex flex-row flex-wrap justify-between mx-auto mt-20 xs:justify-center md:justify-between"
+        >
+          <!--Product 1-->
+          <a href="" class="w-[280px] h-[407px] text-slate-400 flex flex-col">
+            <div class="top-0">
+              <img
+                src="./assets/renault-captur-1,5.webp"
+                alt=""
+                class="w-[280px] h-[180px] bg-center bg-cover rounded-t-md"
+              />
+            </div>
+            <div
+              class="bg-white w-[280px] h-[207px] rounded-b-md shadow-md justify-center space-y-4"
+            >
+              <h2 class="text-2xl font-semibold text-black w-[270px] mx-auto">
+                Peugeot 308 1,5
+              </h2>
+              <div
+                class="flex flex-row justify-between text-sm w-[270px] mx-auto px-2"
+              >
+                <div class="flex flex-row">
+                  <img src="./assets/fuel-icon.svg" alt="" />
+                  <p class="ml-2">Dizel</p>
+                </div>
+                <div class="flex flex-row">
+                  <img src="./assets/mileage-icon.svg" alt="" />
+                  <p class="ml-2">132.381 km</p>
+                </div>
+                <div class="flex flex-row">
+                  <img src="./assets/year-icon.svg" alt="" />
+                  <p class="ml-2">2018</p>
+                </div>
+              </div>
+              <div
+                class="flex flex-row transition hover:translate-x-2 duration-500 hover:duration-500 w-[270px] mx-auto px-2"
+              >
+                <img
+                  src="./assets/kia-sarajevo.webp"
+                  alt=""
+                  class="w-[50px] h-[50px] rounded-full"
+                />
+                <div class="px-2 ml-3">
+                  <h5 class="font-semibold text-black">KiaSarajevo</h5>
+                  <p class="text-sm">Sarajevo - Novi Grad</p>
+                </div>
+              </div>
+              <div class="w-[270px] mx-auto space-y-2 px-2">
+                <h3 class="text-xl font-semibold text-black">26.980 KM</h3>
+                <div class="flex flex-row justify-between text-xs">
+                  <p>Cijena sa PDV-om</p>
+                  <p>prije 1h</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--Product 2-->
+          <a href="" class="w-[280px] h-[407px] text-slate-400 flex flex-col">
+            <div class="top-0">
+              <img
+                src="./assets/gofl-8-2.0.webp"
+                alt=""
+                class="w-[280px] h-[180px] bg-center bg-cover rounded-t-md"
+              />
+            </div>
+            <div
+              class="bg-white w-[280px] h-[207px] rounded-b-md shadow-md justify-center space-y-4"
+            >
+              <h2
+                class="text-2xl font-semibold text-black w-[270px] mx-auto px-2"
+              >
+                VW Golf 8 2.0 TDI
+              </h2>
+              <div
+                class="flex flex-row justify-between text-sm w-[270px] mx-auto px-2"
+              >
+                <div class="flex flex-row">
+                  <img src="./assets/fuel-icon.svg" alt="" />
+                  <p class="ml-2">Dizel</p>
+                </div>
+                <div class="flex flex-row">
+                  <img src="./assets/mileage-icon.svg" alt="" />
+                  <p class="ml-2">112.002 km</p>
+                </div>
+                <div class="flex flex-row">
+                  <img src="./assets/year-icon.svg" alt="" />
+                  <p class="ml-2">2020</p>
+                </div>
+              </div>
+              <div
+                class="flex flex-row transition hover:translate-x-2 duration-500 hover:duration-500 w-[270px] mx-auto px-2"
+              >
+                <img
+                  src="./assets/sksauto.webp"
+                  alt=""
+                  class="w-[50px] h-[50px] rounded-full"
+                />
+                <div class="ml-3">
+                  <h5 class="font-semibold text-black">SKSAUTO</h5>
+                  <p class="text-sm">Istocno Sarajevo</p>
+                </div>
+              </div>
+              <div class="w-[270px] mx-auto space-y-2 px-2">
+                <h3 class="text-xl font-semibold text-black">40.899 KM</h3>
+                <div class="flex flex-row justify-between text-xs">
+                  <p>Cijena sa PDV-om</p>
+                  <p>prije 4h</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--Product 3-->
+          <a href="" class="w-[280px] h-[407px] text-slate-400 flex flex-col">
+            <div class="top-0">
+              <img
+                src="./assets/audi-a5-2.0-tdi.webp"
+                alt=""
+                class="w-[280px] h-[180px] bg-center bg-cover rounded-t-md"
+              />
+            </div>
+            <div
+              class="bg-white w-[280px] h-[207px] rounded-b-md shadow-md justify-center space-y-4"
+            >
+              <h2 class="text-2xl font-semibold text-black w-[270px] mx-auto">
+                Audi A5 2.0 TDI
+              </h2>
+              <div
+                class="flex flex-row justify-between text-sm w-[270px] mx-auto px-2"
+              >
+                <div class="flex flex-row">
+                  <img src="./assets/fuel-icon.svg" alt="" />
+                  <p class="ml-2">Benzin</p>
+                </div>
+                <div class="flex flex-row">
+                  <img src="./assets/mileage-icon.svg" alt="" />
+                  <p class="ml-2">52.589 km</p>
+                </div>
+                <div class="flex flex-row">
+                  <img src="./assets/year-icon.svg" alt="" />
+                  <p class="ml-2">2016</p>
+                </div>
+              </div>
+              <div
+                class="flex flex-row transition hover:translate-x-2 duration-500 hover:duration-500 w-[270px] mx-auto px-2"
+              >
+                <img
+                  src="./assets/car-next-sarajevo.webp"
+                  alt=""
+                  class="w-[50px] h-[50px] rounded-full"
+                />
+                <div class="ml-3">
+                  <h5 class="font-semibold text-black">CarNextSarajevo</h5>
+                  <p class="text-sm">Sarajevo - Novi Grad</p>
+                </div>
+              </div>
+              <div class="w-[270px] mx-auto space-y-2 px-2">
+                <h3 class="text-xl font-semibold text-black">50.000 KM</h3>
+                <div class="flex flex-row justify-between text-xs">
+                  <p>Bez PDV-a</p>
+                  <p>prije 7h</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--Product 4-->
+          <a href="" class="w-[280px] h-[407px] text-slate-400 flex flex-col">
+            <div class="top-0">
+              <img
+                src="./assets/citroen-c4-st.webp"
+                alt=""
+                class="w-[280px] h-[180px] bg-center bg-cover rounded-t-md"
+              />
+            </div>
+            <div
+              class="bg-white w-[280px] h-[207px] rounded-b-md shadow-md justify-center space-y-4"
+            >
+              <h2 class="text-2xl font-semibold text-black w-[270px] mx-auto">
+                Citroen C4
+              </h2>
+              <div
+                class="flex flex-row justify-between text-sm w-[270px] mx-auto px-2"
+              >
+                <div class="flex flex-row">
+                  <img src="./assets/fuel-icon.svg" alt="" />
+                  <p class="ml-2">Dizel</p>
+                </div>
+                <div class="flex flex-row">
+                  <img src="./assets/mileage-icon.svg" alt="" />
+                  <p class="ml-2">182.961 km</p>
+                </div>
+                <div class="flex flex-row">
+                  <img src="./assets/year-icon.svg" alt="" />
+                  <p class="ml-2">2017</p>
+                </div>
+              </div>
+              <div
+                class="flex flex-row transition hover:translate-x-2 duration-500 hover:duration-500 w-[270px] mx-auto px-2"
+              >
+                <img
+                  src="./assets/auto-direct.webp"
+                  alt=""
+                  class="w-[50px] h-[50px] rounded-full"
+                />
+                <div class="ml-3">
+                  <h5 class="font-semibold text-black">AutoDirect</h5>
+                  <p class="text-sm">Sarajevo - Novi Grad</p>
+                </div>
+              </div>
+              <div class="w-[270px] mx-auto space-y-2 px-2">
+                <h3 class="text-xl font-semibold text-black">30.980 KM</h3>
+                <div class="flex flex-row justify-between text-xs">
+                  <p>Cijena sa PDV-om</p>
+                  <p>prije 3h</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div>
+          <!--More products-->
+          <div class="container flex justify-center mx-auto mt-16">
+            <button
+              type="button"
+              class="flex flex-row py-3 w-[150px] bg-blue-800 justify-center rounded"
+            >
+              <h4 class="text-xl text-white">Ucitaj vise</h4>
+              <img src="./assets/down.png" alt="" class="ml-[4px] mt-[8px]" />
+            </button>
+          </div>
+        </div>
+        <!--How it works-->
+        <div class="mt-24 text-slate-400">
+          <div
+            class="flex justify-center mx-auto text-3xl font-bold xs:text-center md:container"
+          >
+            <h1 class="text-black xs:w-full">Kako funkcionise AutoPlac?</h1>
+          </div>
+          <div class="container flex justify-center w-full mx-auto my-8">
+            <div class="w-[100px] h-[3px] bg-blue-600"></div>
+          </div>
+          <div
+            class="container flex justify-center mx-auto mb-6 xs:text-center"
+          >
+            <p>
+              Nakon registracije profila, potpuno besplatno, u samo nekoliko
+              koraka objavite Vaše vozilo.
+            </p>
+          </div>
+          <div class="container flex justify-center mx-auto text-center">
+            <p>
+              Za veću vidljivost Vašeg oglasa koristite AP kredite za
+              jednostavno kreiranje promotivne kampanje na najvećim marketinškim
+              platformama: Facebook, Instagram, Google i/ili MonadPlug sa svojih
+              500 partnera!
+            </p>
+          </div>
+          <div class="mt-6 bg-slate-50">
+            <img src="./assets/medias.webp" alt="" />
+          </div>
+        </div>
+        <div
+          class="h-[236px] container mx-auto bg-slate-50 flex my-auto mt-12 xs:flex-col md:flex-row xs:h-[50%]"
+        >
+          <div class="flex xs:flex-col md:flex-row xs:text-center">
+            <div class="ml-10 mt-11 xs:w-[30%] xs:flex xs:ml-[35%] md:ml-10">
+              <img src="./assets/paketiHome.svg" alt="" />
+            </div>
+            <div class="flex ml-4 xs:flex-col xs:flex">
+              <div class="flex flex-row text-3xl xs:text-center md:text-start">
+                <h3 class="mt-12 mb-5 font-bold">
+                  Maksimalni rezultati uz AutoPlac pakete!
+                </h3>
+              </div>
+              <p class="text-slate-500 w-[70%] flex xs:ml-[15%] md:ml-0">
+                Za vrhunsko iskustvo prodaje, odaberite jednu od dostupnih
+                opcija i uživajte u mnogim pogodnostima koje Vam nudimo.
+              </p>
+              <div
+                class="flex mt-3 text-white xs:justify-center md:justify-start"
+              >
+                <a
+                  href=""
+                  class="bg-blue-800 xs:w-[65%] sm:w-[43%] md:w-[28%] rounded py-1 px-4 items-center flex flex-row text transition duration-500 hover:bg-blue-700 hover:duration-500"
+                  >Pogledajte pakete
+                  <img
+                    src="./assets/right-arrow.png"
+                    alt=""
+                    class="w-[12px] h-[12px] mt-1 ml-2"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="md:h-[446px] w-[100%] bg-[#1e1e1e] static bottom-0 mt-8 xs:h-[720px]"
+    >
+      <div
+        class="w-[88%] text-slate-300 flex container xs:items-center sm:mx-auto md:mx-auto"
+      >
+        <div
+          class="h-[286px] w-full flex flex-row md:mt-[100px] xs:mt-[80px] text-base xs:flex-col xs:flex md:flex-row md:justify-between"
+        >
+          <div
+            class="flex flex-col mx-auto md:justify-between xs:mx-auto md:m-0 xs:text-center"
+          >
+            <div class="xs:mb-3 md:mb-0">
+              <img
+                src="./assets/footer-logo.svg"
+                alt=""
+                class="xs:mx-auto md:m-0"
+              />
+              <p
+                class="w-[380px] mt-[30px] space-y-2 xs:text-center md:text-start"
+              >
+                Platforma specijalizovana za kupovinu i digitalno oglašavanje
+                prodaje automobila u Bosni i Hercegovini. Kupi ili prodaj, dok
+                kažeš Plac!
+              </p>
+            </div>
+            <div
+              class="flex flex-row space-x-4 image xs:justify-center md:justify-normal xs:mb-5 md:mb-2"
+            >
+              <img src="./assets/facebook-icon.svg" alt="" />
+              <img src="./assets/instagram.svg" alt="" />
+              <img src="./assets/yt-icon.svg" alt="" />
+              <img src="./assets/linkedin.svg" alt="" />
+              <img src="./assets/tiktok.svg" alt="" />
+            </div>
+            <p class="xs:hidden md:flex">
+              © 2024 AutoPlac.ba Sva prava zadržana
+            </p>
+          </div>
+          <div
+            class="flex md:space-x-[40px] xs:flex-col md:flex-row xs:text-center xs:justify-center"
+          >
+            <div
+              class="flex flex-col sm:ml-0 xs:ml-[20%] space-y-2 xs:mb-[1%] md:mb-0"
+            >
+              <a href="">Politika privatnosti</a>
+              <a href="">Odredbe i uslovi</a>
+              <a href="">Drustvena odgovornost</a>
+              <a href="">Brisanje racuna</a>
+            </div>
+            <div
+              class="flex flex-col xs:space-x-0 space-y-2 xs:mb-[5%] md:mb-0 sm:ml-0 xs:ml-[20%]"
+            >
+              <a href="">Kontaktirajte nas</a>
+              <a href="">O nama</a>
+              <a href="">Paketi</a>
+              <a href="">FAQ</a>
+            </div>
+            <div class="flex flex-col xs:items-center xs:ml-16 sm:ml-0">
+              <a href=""><img src="./assets/donwload-ios.svg" alt="" /></a>
+              <a href=""
+                ><img src="./assets/donwload-android.svg" alt="" class="mt-4"
+              /></a>
+              <p class="w-[350px] sm:ml-2 xs:ml-0 xs:visible md:hidden mt-5">
+                © 2024 AutoPlac.ba Sva prava zadržana
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
